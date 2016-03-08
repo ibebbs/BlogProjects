@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00D151B7-1762-4913-B774-2E97142D88C7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebRxWithTypeScript</RootNamespace>
+    <AssemblyName>WebRxWithTypeScript</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="js\app.js" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\es6_modules\WebRx.Lite.js.map" />
+    <Content Include="Scripts\es6_modules\WebRx.js.map" />
+    <Content Include="Scripts\es6_modules\Version.js.map" />
+    <Content Include="Scripts\es6_modules\RxExtensions.js.map" />
+    <Content Include="Scripts\es6_modules\Routing\Router.js.map" />
+    <Content Include="Scripts\es6_modules\Routing\RouteMatcher.js.map" />
+    <Content Include="Scripts\es6_modules\Routing\Bindings\View.js.map" />
+    <Content Include="Scripts\es6_modules\Routing\Bindings\StateRef.js.map" />
+    <Content Include="Scripts\es6_modules\Routing\Bindings\StateActive.js.map" />
+    <Content Include="Scripts\es6_modules\Interfaces.js.map" />
+    <Content Include="Scripts\es6_modules\IID.js.map" />
+    <Content Include="Scripts\es6_modules\Core\VirtualChildNodes.js.map" />
+    <Content Include="Scripts\es6_modules\Core\Utils.js.map" />
+    <Content Include="Scripts\es6_modules\Core\ScheduledSubject.js.map" />
+    <Content Include="Scripts\es6_modules\Core\Resources.js.map" />
+    <Content Include="Scripts\es6_modules\Core\RefCountDisposeWrapper.js.map" />
+    <Content Include="Scripts\es6_modules\Core\Property.js.map" />
+    <Content Include="Scripts\es6_modules\Core\Oid.js.map" />
+    <Content Include="Scripts\es6_modules\Core\Module.js.map" />
+    <Content Include="Scripts\es6_modules\Core\MessageBus.js.map" />
+    <Content Include="Scripts\es6_modules\Core\Log.js.map" />
+    <Content Include="Scripts\es6_modules\Core\Lazy.js.map" />
+    <Content Include="Scripts\es6_modules\Core\Injector.js.map" />
+    <Content Include="Scripts\es6_modules\Core\HttpClient.js.map" />
+    <Content Include="Scripts\es6_modules\Core\HtmlTemplateEngine.js.map" />
+    <Content Include="Scripts\es6_modules\Core\ExpressionCompiler.js.map" />
+    <Content Include="Scripts\es6_modules\Core\Events.js.map" />
+    <Content Include="Scripts\es6_modules\Core\Environment.js.map" />
+    <Content Include="Scripts\es6_modules\Core\DomManager.js.map" />
+    <Content Include="Scripts\es6_modules\Core\Command.js.map" />
+    <Content Include="Scripts\es6_modules\Core\Animation.js.map" />
+    <Content Include="Scripts\es6_modules\Components\Select.js.map" />
+    <Content Include="Scripts\es6_modules\Components\RadioGroup.js.map" />
+    <Content Include="Scripts\es6_modules\Collections\WeakMap.js.map" />
+    <Content Include="Scripts\es6_modules\Collections\Set.js.map" />
+    <Content Include="Scripts\es6_modules\Collections\Map.js.map" />
+    <Content Include="Scripts\es6_modules\Collections\ListSupport.js.map" />
+    <Content Include="Scripts\es6_modules\Collections\ListPaged.js.map" />
+    <Content Include="Scripts\es6_modules\Collections\List.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\With.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\Value.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\TextInput.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\SingleOneWay.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\Simple.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\SelectedValue.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\MultiOneWay.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\Module.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\KeyPress.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\If.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\HasFocus.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\ForEach.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\Event.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\Component.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\Command.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\Checked.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\BindingSupport.js.map" />
+    <Content Include="Scripts\es6_modules\Bindings\BindingBase.js.map" />
+    <Content Include="Scripts\es6_modules\App.js.map" />
+    <Content Include="app.config" />
+    <Content Include="tsconfig.json" />
+    <Content Include="js\app.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\es6_modules\App.js" />
+    <Content Include="Scripts\es6_modules\Bindings\BindingBase.js" />
+    <Content Include="Scripts\es6_modules\Bindings\BindingSupport.js" />
+    <Content Include="Scripts\es6_modules\Bindings\Checked.js" />
+    <Content Include="Scripts\es6_modules\Bindings\Command.js" />
+    <Content Include="Scripts\es6_modules\Bindings\Component.js" />
+    <Content Include="Scripts\es6_modules\Bindings\Event.js" />
+    <Content Include="Scripts\es6_modules\Bindings\ForEach.js" />
+    <Content Include="Scripts\es6_modules\Bindings\HasFocus.js" />
+    <Content Include="Scripts\es6_modules\Bindings\If.js" />
+    <Content Include="Scripts\es6_modules\Bindings\KeyPress.js" />
+    <Content Include="Scripts\es6_modules\Bindings\Module.js" />
+    <Content Include="Scripts\es6_modules\Bindings\MultiOneWay.js" />
+    <Content Include="Scripts\es6_modules\Bindings\SelectedValue.js" />
+    <Content Include="Scripts\es6_modules\Bindings\Simple.js" />
+    <Content Include="Scripts\es6_modules\Bindings\SingleOneWay.js" />
+    <Content Include="Scripts\es6_modules\Bindings\TextInput.js" />
+    <Content Include="Scripts\es6_modules\Bindings\Value.js" />
+    <Content Include="Scripts\es6_modules\Bindings\With.js" />
+    <Content Include="Scripts\es6_modules\Collections\List.js" />
+    <Content Include="Scripts\es6_modules\Collections\ListPaged.js" />
+    <Content Include="Scripts\es6_modules\Collections\ListSupport.js" />
+    <Content Include="Scripts\es6_modules\Collections\Map.js" />
+    <Content Include="Scripts\es6_modules\Collections\Set.js" />
+    <Content Include="Scripts\es6_modules\Collections\WeakMap.js" />
+    <Content Include="Scripts\es6_modules\Components\RadioGroup.js" />
+    <Content Include="Scripts\es6_modules\Components\Select.js" />
+    <Content Include="Scripts\es6_modules\Core\Animation.js" />
+    <Content Include="Scripts\es6_modules\Core\Command.js" />
+    <Content Include="Scripts\es6_modules\Core\DomManager.js" />
+    <Content Include="Scripts\es6_modules\Core\Environment.js" />
+    <Content Include="Scripts\es6_modules\Core\Events.js" />
+    <Content Include="Scripts\es6_modules\Core\ExpressionCompiler.js" />
+    <Content Include="Scripts\es6_modules\Core\HtmlTemplateEngine.js" />
+    <Content Include="Scripts\es6_modules\Core\HttpClient.js" />
+    <Content Include="Scripts\es6_modules\Core\Injector.js" />
+    <Content Include="Scripts\es6_modules\Core\Lazy.js" />
+    <Content Include="Scripts\es6_modules\Core\Log.js" />
+    <Content Include="Scripts\es6_modules\Core\MessageBus.js" />
+    <Content Include="Scripts\es6_modules\Core\Module.js" />
+    <Content Include="Scripts\es6_modules\Core\Oid.js" />
+    <Content Include="Scripts\es6_modules\Core\Property.js" />
+    <Content Include="Scripts\es6_modules\Core\RefCountDisposeWrapper.js" />
+    <Content Include="Scripts\es6_modules\Core\Resources.js" />
+    <Content Include="Scripts\es6_modules\Core\ScheduledSubject.js" />
+    <Content Include="Scripts\es6_modules\Core\Utils.js" />
+    <Content Include="Scripts\es6_modules\Core\VirtualChildNodes.js" />
+    <Content Include="Scripts\es6_modules\IID.js" />
+    <Content Include="Scripts\es6_modules\Interfaces.js" />
+    <Content Include="Scripts\es6_modules\Routing\Bindings\StateActive.js" />
+    <Content Include="Scripts\es6_modules\Routing\Bindings\StateRef.js" />
+    <Content Include="Scripts\es6_modules\Routing\Bindings\View.js" />
+    <Content Include="Scripts\es6_modules\Routing\RouteMatcher.js" />
+    <Content Include="Scripts\es6_modules\Routing\Router.js" />
+    <Content Include="Scripts\es6_modules\RxExtensions.js" />
+    <Content Include="Scripts\es6_modules\Version.js" />
+    <Content Include="Scripts\es6_modules\WebRx.js" />
+    <Content Include="Scripts\es6_modules\WebRx.Lite.js" />
+    <Content Include="Scripts\rx.aggregates.js" />
+    <Content Include="Scripts\rx.aggregates.min.js" />
+    <Content Include="Scripts\rx.all.compat.js" />
+    <Content Include="Scripts\rx.all.js" />
+    <Content Include="Scripts\rx.binding.js" />
+    <Content Include="Scripts\rx.binding.min.js" />
+    <Content Include="Scripts\rx.coincidence.js" />
+    <Content Include="Scripts\rx.coincidence.min.js" />
+    <Content Include="Scripts\rx.compat.js" />
+    <Content Include="Scripts\rx.compat.min.js" />
+    <Content Include="Scripts\rx.experimental.js" />
+    <Content Include="Scripts\rx.experimental.min.js" />
+    <Content Include="Scripts\rx.joinpatterns.js" />
+    <Content Include="Scripts\rx.joinpatterns.min.js" />
+    <Content Include="Scripts\rx.js" />
+    <Content Include="Scripts\rx.min.js" />
+    <Content Include="Scripts\rx.testing.js" />
+    <Content Include="Scripts\rx.testing.min.js" />
+    <Content Include="Scripts\rx.time.js" />
+    <Content Include="Scripts\rx.time.min.js" />
+    <Content Include="Scripts\rx.virtualtime.js" />
+    <Content Include="Scripts\rx.virtualtime.min.js" />
+    <Content Include="Scripts\web.rx.js" />
+    <Content Include="Scripts\web.rx.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="ts\app.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\App.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\BindingBase.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\BindingSupport.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\Checked.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\Command.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\Component.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\Event.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\ForEach.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\HasFocus.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\If.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\KeyPress.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\Module.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\MultiOneWay.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\SelectedValue.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\Simple.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\SingleOneWay.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\TextInput.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\Value.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Bindings\With.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Collections\List.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Collections\ListPaged.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Collections\ListSupport.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Collections\Map.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Collections\Set.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Collections\WeakMap.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Components\RadioGroup.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Components\Select.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\Animation.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\Command.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\DomManager.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\Environment.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\Events.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\ExpressionCompiler.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\HtmlTemplateEngine.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\HttpClient.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\Injector.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\Lazy.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\Log.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\MessageBus.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\Module.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\Oid.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\Property.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\RefCountDisposeWrapper.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\Resources.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\ScheduledSubject.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\Utils.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Core\VirtualChildNodes.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\IID.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Interfaces.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Routing\Bindings\StateActive.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Routing\Bindings\StateRef.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Routing\Bindings\View.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Routing\RouteMatcher.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Routing\Router.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\RxExtensions.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\Version.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\WebRx.d.ts" />
+    <TypeScriptCompile Include="Scripts\es6_modules\WebRx.Lite.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.aggregates.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.aggregates.es6.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.all.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.all.es6.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.binding.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.binding.es6.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.coincidence.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.coincidence.es6.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.es6.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.experimental.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.experimental.es6.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.joinpatterns.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.joinpatterns.es6.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.lite.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.lite.es6.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.testing.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.testing.es6.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.time.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.time.es6.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.virtualtime.d.ts" />
+    <TypeScriptCompile Include="Scripts\rx.virtualtime.es6.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\web.rx.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49979</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49979/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(SQLDBExtensionsRefPath)' == ''" />
+  <PropertyGroup>
+    <SsdtUnitTestVersion>2.0</SsdtUnitTestVersion>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
